@@ -1,0 +1,27 @@
+{
+  "name": "mercearia",
+  "version": "1.0.0",
+  "description": "Mini sistema de mercearia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "lodash": "^4.17.19",
+    "lodash.mergewith": ">=4.6.2",
+    "mixin-deep": "^2.0.1",
+    "node-sass": "^4.14.1",
+    "set-value": "^3.0.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,16 @@
+@mixin buttonRed($width,$height,$radius){
+    background-color: red;
+    color:white;
+    width:$width;
+    height:$height;
+    border-radius: $radius;
+    border:none;
+    margin-top:35px;
+
+    &:hover{
+        background-color: transparent;
+        border:1px solid black;
+        color:black;
+        transition: .1s linear;
+    }
+}

@@ -1,0 +1,136 @@
+@import 'fonts.scss';
+@import 'variables';
+
+html,body{
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin:0;
+    position: relative;
+}
+input{
+    outline: none;
+    border: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    h1{
+        font-weight: bold;
+        font-family: Georgia;
+        font-style: italic;
+        color:$preto_lodo;
+        font-size: 3rem;
+        border-bottom:5px solid $preto_lodo;
+        margin: 0 auto;
+        margin-bottom:45px;
+        margin-top:45px;
+    }
+
+    .containerPromotions{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin:0 auto;
+        gap:25px;
+        align-items: center;
+    }
+    .cardProduct{
+        max-height: 500px;
+        background-color: red;
+        border-radius:10px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width:250px;
+        height: 500px;
+
+        img{
+            width: 100%;
+        }
+
+        .infoProduct{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+            height: 100%;
+
+            h2{
+                font-weight: bold;
+                font-size: 1.3rem;
+                color:$branco;
+                font-family: Roboto;
+            }
+            h3{
+                font-weight: bold;
+                font-family: Roboto;
+                color:$branco;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+.not-found-promotions{
+    width:80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin:0 auto;
+
+    img{
+        width: 80%;
+    }
+    h2{
+        font-family: Georgia;
+        font-size: 2.5rem;
+    }
+}
+@media(max-width:1076px){
+    .containerPromotions{
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+@media(max-width:834px){
+    .not-found-promotions{
+        h2{
+            font-size: 1.8rem;
+        }
+    }
+}
+@media(max-width:545px){
+    .containerPromotions{
+        grid-template-columns: 1fr !important;
+    }
+    .not-found-promotions{
+        width:100%;
+
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+}
+@media(max-width:411px){
+    .not-found-promotions{
+        h2{
+            font-size: 1.3rem;
+        }
+    }
+}
+@media(max-width:340px){
+    .container{
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@mixin input($width,$height,$borderRadius){
+    width:$width;
+    height: $height;
+    border-radius:$borderRadius;
+}

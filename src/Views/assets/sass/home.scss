@@ -1,0 +1,693 @@
+@import 'variables';
+@import 'button';
+@import 'fonts.scss';
+@import 'input.scss';
+
+html,body{
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin:0;
+    position: relative;
+}
+[data-anime]{
+    opacity: 0;
+}
+input{
+    outline: none;
+    border: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+header{
+    max-width: 800px;
+    margin:0 auto;
+    height: 80px;
+    h1{
+        font-size: 2.3rem;
+        font-weight: bold;
+        text-align: center;
+        color:$preto_lodo;
+        font-family: Georgia;
+        font-style: italic;
+    }
+    ion-icon{
+        display: none;
+    }
+
+    .menu-header{
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:80%;
+        margin: 0 auto;
+
+        .menu-item{
+            width: 140px;
+            height: 30px;
+            background-color: $preto_fosco;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            a{
+                color:$branco;
+                font-family: Roboto;
+                font-size:1.1rem;
+            }
+        }
+    }
+}
+.containerDestaque{
+    display: grid;
+    grid-template-columns: 33% 66%;
+    margin-top:50px;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+.effect{
+    padding-left: 35px;
+    padding-right: 35px;
+
+    h1{
+        font-family: Roboto;
+        width:100%;
+        font-size: 2.5rem;
+    }
+    a{
+        @include buttonRed(200px,40px,10px);
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: Roboto;
+        line-height: 40px;
+    }
+}
+.productsDestaques{
+    height: 500px;
+    display: flex;
+    
+    img{
+        width: 100%;
+    }
+
+    div{
+        display:flex;
+        overflow-x: auto;
+        .cardProduct{
+            max-height: 500px;
+            margin-right:20px;
+            background-color: red;
+            border-radius:10px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-width: 280px;
+            max-width: 300px;
+            img{
+                width: 100%;
+                height: 250px;
+            }
+    
+            .infoProduct{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                justify-content: space-between;
+                height: 100%;
+
+                h2{
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    color:$branco;
+                    font-family: Roboto;
+                }
+                h3{
+                    font-weight: bold;
+                    font-family: Roboto;
+                    color:$branco;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.containerCompany{
+    padding-left: 35px;
+    padding-right: 35px;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    img{
+        width: 100%;
+        max-width: 80%;
+    }
+
+    .wordEffect{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3{
+            font-family: Georgia;
+            color:$preto_fosco;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        div{
+            p{
+                font-family: Roboto;
+                font-weight: bold;
+                color:$preto_fosco;
+                font-size:2rem;
+                text-align: center;
+            }
+            a{
+                @include buttonRed(300px,45px,0);
+                display: block;
+                text-align: center;
+                line-height: 45px;
+                font-family: Roboto;
+                font-weight: bold;
+                font-size:1.5rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+.containerContact{
+    display: flex;
+    justify-content: center;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top:100px;
+
+    .contactInfo{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 1050px;
+        height: 1050px;
+        align-items: center;
+        :first-child{
+            font-family: Georgia;
+            font-size: 4rem;
+            color:$preto_lodo;
+        }
+        iframe{
+            margin-top:50px;
+        }
+        .contact{
+            display: block;
+            h1{
+                margin:5px;
+                font-size:2.3rem;
+                font-family: Roboto;
+                font-weight: bold;
+                color:$preto_fosco;
+            }
+        }
+    }
+}
+
+.containerInfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top:200px;
+
+    @for $i from 1 through 3{
+        .info-#{$i}{
+            h1{
+                font-family: Georgia;
+                $color:$preto_lodo;
+                font-size:3rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            p{
+                font-family: Roboto;
+                font-weight: bold;
+                $color:$preto_fosco;
+                font-size:1.8rem;
+                padding-left:1.5rem;
+                padding-right:1.5rem;
+                box-sizing: border-box;
+                text-align: center;
+                max-width:300px;
+                width: 100%;
+                margin: 0 auto;
+                word-wrap: break-word;
+            }
+        }
+    }
+}
+.containerUser{
+    background-color:$preto_fosco;
+    display:flex;
+    align-items: center;
+    margin-top:200px;
+    max-height: 1000px;
+    height:100vh;
+    flex-direction: column;
+
+    h1{
+        background-color: $branco;
+        width:100%;
+        margin: 0;
+        text-align: center;
+        font-size:3rem;
+        font-family: Roboto;
+        margin-bottom:10px;
+        color:$preto_fosco;
+    }
+
+    #formUser{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        padding-top:20px;
+        .content-1{
+            display:flex;
+            flex-direction: column;
+
+            label{
+                color:white;
+                font-family: Roboto;
+                font-size:1.5rem;
+                margin-bottom:10px;
+            }
+            input{
+                @include input(300px,50px,5px);
+                margin-bottom:20px;
+                font-size:1.3rem;
+                font-weight: bold;
+            }
+        }
+        .content-2{
+            display:flex;
+            flex-direction: column;
+
+            label{
+                color:white;
+                font-family: Roboto;
+                font-size:1.5rem;
+                margin-bottom:10px;
+            }
+            textarea{
+                @include input(300px,100%,5px);
+                resize: none;
+                margin-bottom:20px;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    button{
+        @include buttonRed(300px,50px,10px);
+        font-size:1.7rem;
+        font-family: Roboto;
+        font-weight: bold;
+    }
+}
+footer{
+    box-sizing: border-box;
+    background-color: $preto_fosco;
+    height: 100vh;
+    margin-top:300px;
+    padding:30px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .containerLogo{
+
+        h1{
+            color:$branco;
+            font-size:6rem;
+            font-family: Roboto;
+        }
+        
+        .social-networks{
+            ion-icon{
+                color:white;
+                font-size: 3rem;
+                margin-right: 20px;
+                cursor: pointer;
+
+                &:hover{
+                    color:$vermelho;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+    .links-site{
+        display: flex;
+        flex-direction: column;
+        a{ 
+            color:white;
+            font-size:1.5rem;
+            font-family: Roboto;
+            padding:15px;
+            &:hover{
+                color:$vermelho;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+.menu-mobile{
+    display: flex;
+    flex-direction: column;
+    display: none;
+    li{
+        padding:20px;
+        text-align: center;
+        background-color: $preto_fosco;
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+
+            a{
+                color:black;
+            }
+        }
+        a{
+            color:white;
+            font-weight: bold;
+            font-family: Roboto;
+            width:100%;
+        }
+    }
+}
+#menu{
+    cursor: pointer;
+}
+@media (max-width:999px){
+    .containerUser{
+        height: 150vh;
+        #formUser{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+@media (max-width:800px){
+    .containerDestaque{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        h1{
+            border:none;
+        }
+    }
+    .effect{
+        padding: 0;
+        h1{
+            width:50%;
+            margin:0 auto;
+            font-size: 2rem;
+        }
+        a{
+            margin:0 auto;
+            @include buttonRed(50%,60px,10px);
+            font-size: 2rem;
+            line-height: 60px;
+            margin-bottom: 50px;
+        }
+    }
+    .containerInfo{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:768px){
+    .menu-header{
+        display: none!important;   
+    }
+    header{
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+
+            ion-icon{
+                display: block;
+                font-size: 4rem;
+                color:$preto_lodo;
+                
+            }
+        }
+    }
+    .containerCompany{
+        display: flex;
+        flex-direction: column;
+
+        img{
+            margin: 0 auto;
+        }
+
+        .wordEffect{
+            h3{
+                text-align: center;
+            }
+
+            div{
+                width: 100%;
+                p{
+                    font-size: 1.8rem;
+                    width: 80%;
+                    margin:0 auto;
+                }
+                a{
+                    margin: 0 auto;
+                    margin-top:50px
+                }
+            }
+        }
+    }
+    .containerInfo{
+        @for $i from 1 through 3{
+            .info-#{$i}{
+                h1{
+                    font-size:2.5rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .containerContact{
+        .contactInfo{
+            :first-child{
+                font-size: 3.5rem;
+            }
+            .contact{
+                h1{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width:700px){
+    footer{
+        flex-direction: column;
+    }
+    .social-networks{
+        display: flex;
+        justify-content: center;
+    }
+    .containerInfo{
+        @for $i from 1 through 3{
+            .info-#{$i}{
+                h1{
+                    font-size:2.5rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:475px){
+    .effect{
+        h1{
+            width: 80%;
+        }
+        a{
+            @include buttonRed(300px,40px,5px);
+            font-size: 1.3rem;
+            line-height: 40px;
+        }
+    }
+    .containerContact{
+        .contactInfo{
+            :first-child{
+                font-size:3rem;
+            }
+            .contact{
+                h1{
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .containerUser{
+        h1{
+            font-size:2.5rem;
+        }
+        #formUser{
+            .content-1{
+                label{
+                    font-size: 1.3rem;
+                }
+            }
+            .content-2{
+                label{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    footer{
+        .containerLogo{
+            h1{
+                font-size: 3.5rem;
+            }
+        }
+    }
+    .containerCompany{
+        img{
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+@media (max-width:360px){
+    .productsDestaques{
+        div{
+            .cardProduct{
+                .infoProduct{
+                    h2{
+                        font-size:1.4rem;
+                    }
+                    h3{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+    .effect{
+        h1{
+            text-align: center;
+        }
+        a{
+            @include buttonRed(50%,40px,10px);
+        }
+    }
+    .containerCompany{
+        .wordEffect{
+            h3{
+                font-size: 1.8rem;
+            }
+            div{
+                p{
+                    font-size: 1.6rem;
+                }
+                a{
+                    @include buttonRed(80%,45px,0px);
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    header{
+        .menu-header-mobile{
+            width:60px;
+        }
+    }
+    .containerInfo{
+        padding: 0;
+    }
+    .containerContact{
+        .contactInfo{
+            :first-child{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+@media (max-width:320px){
+    .productsDestaques{
+        padding: 0;
+        div{
+            .cardProduct{
+                min-width:250px;
+            }
+        }
+    }
+    .containerUser{
+        #formUser{
+            .content-1{
+                input{
+                    @include input(250px,50px,5px);
+                }
+            }
+            .content-2{
+                textarea{
+                    @include input(250px,100%,5px);
+                    resize: none;
+                }
+            }
+        }
+        button{
+            @include buttonRed(250px,50px,10px);
+        }
+    }
+}
+@media (max-width:300px){
+    .containerInfo{
+        padding: 0;
+    }
+    footer{
+        .containerLogo{
+            h1{
+                font-size:2.5rem;
+                text-align: center;
+            }
+        }
+    }
+    header{
+        h1{
+            font-size: 1.8rem;
+        }
+    }
+    .effect{
+        h1{
+           font-size: 1.8rem; 
+        }
+    }
+}
