@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Mercearia ETA</title>
+    <meta name="description" content="Mercearia/Supermercado perto de você, onde você encontrará produtos de qualidade">
+    <meta name="keywords" content="supermercado, mercadinho, lista de mercado, supermercado big, supermercado aberto hoje, supermercado perto de min, mercado bom preço, supermercado aberto"/>
+    <title>ETA Supermercado</title>
+    <!-- <link rel="canonical" href="https://www.etasupermercado.com.br"/> -->
     <link rel="stylesheet" href=<?php echo BASE_ASSETS."css/home.css"?>>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <link
@@ -42,7 +45,7 @@
                 <div>
                     <?php foreach($productsFeatured as $product){?>
                         <div class="cardProduct">
-                            <img src="<?php echo BASE_PATH_IMAGES.'products/'.$product->getImage()?>" alt="leite">
+                            <img src="<?php echo BASE_PATH_IMAGES.'products/'.$product->getImage()?>" alt=<?php echo $product->getName()?>>
                             
                             <div class="infoProduct">
                                 <h2><?php echo $product->getName()?></h2>
@@ -52,7 +55,7 @@
                     <?php } ?>
                 </div>
             <?php }else{ ?>
-                <img src="<?php echo BASE_PATH_IMAGES?>cart.svg" alt="">
+                <img src="<?php echo BASE_PATH_IMAGES?>cart.svg" alt="cart">
             <?php } ?>
         </div>
     </section>

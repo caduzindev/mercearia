@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Not Found</title></head><body><img src="<?php echo BASE_PATH_IMAGES?>404.svg" alt="404"></body></html>

@@ -28,4 +28,13 @@ $router->get('/admin/listProducts',"ProductsController:listProduct");
 $router->get('/admin/usersList',"RegisterController:usersList");
 $router->get('/admin/removeProduct/{id}',"ProductsController:remove");
 
+//error
+$router->get("/error/{erro}",function($data){
+    echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Not Found</title></head><body><div style="width:80%;margin:0 auto;"><img style="width:100%;height:100vh" src="'.BASE_PATH_IMAGES.'404.svg" alt="404"></div></body></html>';
+});
+
 $router->dispatch();
+
+if ($router->error()) {
+    $router->redirect("/error/{$router->error()}");
+}

@@ -1,3 +1,4 @@
 node_modules/
 vendor/
-src/Views/assets/dist/
+src/Views/assets/dist
+src/Views/assets/images/products
