@@ -3,7 +3,7 @@
 namespace App\Models;
 
 class InfoModel implements Info{
-    private int $id;
+    private int $id = 0;
     private string $street = '';
     private string $neigh = '';
     private string $num = '';

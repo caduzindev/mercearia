@@ -27,7 +27,7 @@ class InfoDAO{
             $data = $query->fetch(\PDO::FETCH_ASSOC);
 
             $info = new InfoModel();
-            $info->setId($data['id']);
+            $info->setId(intval($data['id']));
             $info->setStreet($data['street']);
             $info->setNeigh($data['neigh']);
             $info->setNum($data['num']);

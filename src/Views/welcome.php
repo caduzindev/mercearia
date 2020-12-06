@@ -6,8 +6,11 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Mercearia/Supermercado perto de você, onde você encontrará produtos de qualidade">
     <meta name="keywords" content="supermercado, mercadinho, lista de mercado, supermercado big, supermercado aberto hoje, supermercado perto de min, mercado bom preço, supermercado aberto"/>
+    <meta property="og:title" content="ETA Supermercado"/>
+    <!-- <meta property= “og: image” content=”http:seomaster.com.br/wp-content/themes/img/facebooklogo.png”/> -->
+    <meta property="og:url" content="https://www.testandosite.com.br/"/>
     <title>ETA Supermercado</title>
-    <!-- <link rel="canonical" href="https://www.etasupermercado.com.br"/> -->
+    <link rel="canonical" href="https://www.testandosite.com.br/"/>
     <link rel="stylesheet" href=<?php echo BASE_ASSETS."css/home.css"?>>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <link
@@ -45,7 +48,7 @@
                 <div>
                     <?php foreach($productsFeatured as $product){?>
                         <div class="cardProduct">
-                            <img src="<?php echo BASE_PATH_IMAGES.'products/'.$product->getImage()?>" alt=<?php echo $product->getName()?>>
+                            <img src="<?php echo BASE_PATH_IMAGES.'products/'.$product->getImage()?>" alt=<?php echo $product->getName()?> loading=lazy>
                             
                             <div class="infoProduct">
                                 <h2><?php echo $product->getName()?></h2>
@@ -55,13 +58,13 @@
                     <?php } ?>
                 </div>
             <?php }else{ ?>
-                <img src="<?php echo BASE_PATH_IMAGES?>cart.svg" alt="cart">
+                <img src="<?php echo BASE_PATH_IMAGES?>cart.svg" alt="cart" loading=lazy>
             <?php } ?>
         </div>
     </section>
 
     <section class="containerCompany">
-        <img src=<?php echo BASE_PATH_IMAGES."empresa.png"?> alt="company" data-anime="animate__slideInLeft">
+        <img src=<?php echo BASE_PATH_IMAGES."empresa.png"?> alt="company" data-anime="animate__slideInLeft" loading=lazy>
         <div class="wordEffect" data-anime="animate__backInRight">
             <h3>Acredite em nós</h3>
             <div>
@@ -87,16 +90,16 @@
     <section class="containerInfo" id="sobre">
         <div class="info-1" data-anime="animate__fadeInLeftBig">
             <h1>Missão</h1>
-            <p><?php echo $info->getMission()?></p>
+            <p><?php echo utf8_encode($info->getMission())?></p>
         </div>
         <div class="info-2" data-anime="animate__fadeInRightBig">
             <h1>Valores</h1>
-            <p><?php echo $info->getValue()?>
+            <p><?php echo utf8_encode($info->getValue())?>
         </p>
         </div>   
         <div class="info-3" data-anime="animate__fadeInLeftBig">
             <h1>Visão</h1>
-            <p><?php echo $info->getEyes()?></p>
+            <p><?php echo utf8_encode($info->getEyes())?></p>
         </div>
     </section>
 

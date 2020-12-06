@@ -40,7 +40,7 @@ sign_in_form.addEventListener('submit',(e)=>{
                 document.querySelector('.form-container').style.display="none"
                 container.classList.add("sign-in-mode")
                 setTimeout(()=>{
-                    window.location.href='/Mercearia/admin'
+                    window.location.href='/admin'
                 },2000)
             },2000)
         }
